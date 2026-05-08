@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Camp of Legends — Wiki</title>
+  <meta name="description" content="Official wiki for Camp of Legends — the Telegram RPG bot. Heroes, missions, items, crafting, and more." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ── Telegram CTA Banner ──────────────────────────────────────────── -->
+  <div class="tg-banner">
+    ⚔️ Camp of Legends is live on Telegram!
+    <a href="https://t.me/TU_BOT" target="_blank" rel="noopener">Join the game →</a>
+  </div>
+
+  <!-- ── Header ────────────────────────────────────────────────────────── -->
+  <header>
+    <div class="header-title">⚔️ Camp of <span>Legends</span></div>
+    <div class="header-sub">Open Beta — Official Wiki</div>
+  </header>
+
+  <!-- ── Navigation ────────────────────────────────────────────────────── -->
+  <nav class="wiki-nav" id="wiki-nav">
+    <a href="#getting-started" class="nav-tab active">🚀 Getting Started</a>
+    <a href="#heroes"          class="nav-tab">⚔️ Heroes</a>
+    <a href="#missions"        class="nav-tab">🗺️ Missions</a>
+    <a href="#items"           class="nav-tab">🎒 Items</a>
+    <a href="#crafting"        class="nav-tab">🔨 Crafting</a>
+    <a href="#shop"            class="nav-tab">🛒 Shop</a>
+  </nav>
+
+  <!-- ── Main Content ──────────────────────────────────────────────────── -->
+  <main>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         SECTION 1: GETTING STARTED
+    ════════════════════════════════════════════════════════════════════ -->
+    <section id="getting-started">
+      <h2 class="section-title">🚀 Getting Started</h2>
+      <p class="section-desc">Everything you need to begin your adventure in Camp of Legends.</p>
+
+      <div class="info-box" style="border-left-color:var(--gold); margin-bottom:24px;">
+        <h4>🎮 What is Camp of Legends?</h4>
+        Camp of Legends is a Telegram RPG bot where you recruit heroes, send them on missions, collect loot,
+        craft powerful gear, and build the strongest camp. The game runs passively — your heroes go out
+        while you're away and bring back gold and items.
+      </div>
+
+      <h3 style="font-family:'Cinzel',serif;font-size:1rem;color:var(--accent);margin-bottom:14px;letter-spacing:0.05em;">HOW TO START</h3>
+      <div class="info-box" style="margin-bottom:24px;">
+        <ol class="steps-list">
+          <li>
+            <div>
+              <strong>Open the bot on Telegram</strong><br>
+              <span style="color:var(--text-muted);font-size:0.85rem">Visit <a href="https://t.me/TU_BOT" target="_blank">t.me/TU_BOT</a> and press <strong>Start</strong>. Your account is created automatically.</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Check your recruits</strong><br>
+              <span style="color:var(--text-muted);font-size:0.85rem">Send <code>recruits</code> to see available heroes. You start with one free recruit slot.</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Recruit your first hero</strong><br>
+              <span style="color:var(--text-muted);font-size:0.85rem">Send <code>recruit [name]</code> to accept a hero from the pool. Heroes have different classes — choose wisely!</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Send them on a mission</strong><br>
+              <span style="color:var(--text-muted);font-size:0.85rem">Send <code>send [hero] on [mission_id]</code>. Try <code>forest_patrol</code> first — low difficulty, quick rewards.</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Check back later</strong><br>
+              <span style="color:var(--text-muted);font-size:0.85rem">Send <code>status</code> any time — completed missions are automatically resolved and loot is added to your inventory.</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Equip, craft, grow</strong><br>
+              <span style="color:var(--text-muted);font-size:0.85rem">Use <code>equip [item] on [hero]</code>, craft recipes with <code>craft [recipe]</code>, and unlock harder missions as your heroes level up.</span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <h3 style="font-family:'Cinzel',serif;font-size:1rem;color:var(--accent);margin-bottom:14px;letter-spacing:0.05em;">COMMAND REFERENCE</h3>
+      <div class="table-wrap">
+        <table class="cmd-table wiki-table">
+          <thead>
+            <tr><th>Command</th><th>Description</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>status</code></td>
+              <td>View all your heroes, active missions, and gold balance. Resolves any completed missions automatically.<div class="cmd-example">→ status</div></td>
+            </tr>
+            <tr>
+              <td><code>missions</code></td>
+              <td>List all available missions with duration and difficulty.<div class="cmd-example">→ missions</div></td>
+            </tr>
+            <tr>
+              <td><code>send [hero] on [mission]</code></td>
+              <td>Send a hero on a mission using the mission ID.<div class="cmd-example">→ send Aela on forest_patrol</div></td>
+            </tr>
+            <tr>
+              <td><code>abort [hero]'s mission</code></td>
+              <td>Cancel an active mission. You receive partial gold and XP based on elapsed time.<div class="cmd-example">→ abort Aela's mission</div></td>
+            </tr>
+            <tr>
+              <td><code>recruits</code></td>
+              <td>See heroes available for recruitment. Pool refreshes after missions.<div class="cmd-example">→ recruits</div></td>
+            </tr>
+            <tr>
+              <td><code>recruit [name]</code></td>
+              <td>Accept a hero from the recruit pool into your camp.<div class="cmd-example">→ recruit Kael</div></td>
+            </tr>
+            <tr>
+              <td><code>dismiss [name]</code></td>
+              <td>Remove a recruit from the pool without accepting them.<div class="cmd-example">→ dismiss Kael</div></td>
+            </tr>
+            <tr>
+              <td><code>stats [hero]</code></td>
+              <td>View detailed stats, equipment, power rating, and XP progress for a hero.<div class="cmd-example">→ stats Aela</div></td>
+            </tr>
+            <tr>
+              <td><code>inventory</code></td>
+              <td>Check your item inventory.<div class="cmd-example">→ inventory</div></td>
+            </tr>
+            <tr>
+              <td><code>equip [item] on [hero]</code></td>
+              <td>Equip a weapon, armor, or accessory on a hero. Replaces the current item in that slot.<div class="cmd-example">→ equip iron_sword on Aela</div></td>
+            </tr>
+            <tr>
+              <td><code>unequip [hero] [slot]</code></td>
+              <td>Remove an item from a hero's slot (weapon / armor / accessory).<div class="cmd-example">→ unequip Aela weapon</div></td>
+            </tr>
+            <tr>
+              <td><code>recipes</code></td>
+              <td>List all crafting recipes and whether you have the required materials.<div class="cmd-example">→ recipes</div></td>
+            </tr>
+            <tr>
+              <td><code>craft [recipe]</code></td>
+              <td>Craft an item from a recipe. Uses materials from your inventory.<div class="cmd-example">→ craft iron_blade</div></td>
+            </tr>
+            <tr>
+              <td><code>shop</code></td>
+              <td>Browse the NPC shop with available items and buy prices.<div class="cmd-example">→ shop</div></td>
+            </tr>
+            <tr>
+              <td><code>buy [item]</code></td>
+              <td>Purchase an item from the shop.<div class="cmd-example">→ buy leather_vest</div></td>
+            </tr>
+            <tr>
+              <td><code>sell [qty] [item]</code></td>
+              <td>Sell items from your inventory for gold.<div class="cmd-example">→ sell 3 iron_ore</div></td>
+            </tr>
+            <tr>
+              <td><code>info [item]</code></td>
+              <td>View detailed info and stats for any item.<div class="cmd-example">→ info shadow_blade</div></td>
+            </tr>
+            <tr>
+              <td><code>help</code></td>
+              <td>Show the full command reference inside the bot.<div class="cmd-example">→ help</div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="info-box" style="border-left-color:var(--gold);">
+        <h4>💡 Tips for new players</h4>
+        <ul style="padding-left:16px;font-size:0.88rem;color:var(--text-muted);line-height:1.9">
+          <li>Mission success depends on your hero's <strong style="color:var(--text)">Power rating</strong> vs the mission's danger level.</li>
+          <li>Failed missions give 25% XP and may wound your hero — they'll recover after a short cooldown.</li>
+          <li>Equipping gear directly improves Power and your success chances on harder missions.</li>
+          <li>New hero slots unlock as your overall progress grows — complete missions to earn them.</li>
+          <li>Endgame gear (Shadow Blade, Dragonscale Vest, Champion's Sword) cannot be bought — only looted or crafted.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         SECTION 2: HEROES
+    ════════════════════════════════════════════════════════════════════ -->
+    <section id="heroes">
+      <h2 class="section-title">⚔️ Heroes</h2>
+      <p class="section-desc">Three hero classes, each with distinct strengths. Choose based on your playstyle.</p>
+
+      <!-- Class Cards -->
+      <div class="hero-cards">
+        <div class="hero-card">
+          <div class="hero-card-title">⚔️ <span style="color:#ff6b81">Warrior</span></div>
+          <div class="hero-stat-row"><span class="hero-stat-label">❤️ HP Base</span><span class="hero-stat-val">120</span></div>
+          <div class="hero-stat-row"><span class="hero-stat-label">❤️ HP / lvl</span><span class="hero-stat-val">+18</span></div>
+          <div class="hero-stat-row"><span class="hero-stat-label">⚔️ ATK Base</span><span class="hero-stat-val">14</span></div>
+          <div class="hero-stat-row"><span class="hero-stat-label">⚔️ ATK / lvl</span><span class="hero-stat-val">+3.5</span></div>
+          <div class="hero-stat-row"><span class="hero-stat-label">🛡️ DEF Base</span><span class="hero-stat-val">12</span></div>
+          <div class="hero-stat-row"><span class="hero-stat-label">🛡️ DEF / lvl</span><span class="hero-stat-val">+2.5</span></div>
+          <div class="hero-stat-row"><span class="hero-stat-label">💨 SPD</span><span class="hero-stat-val">10</span></div>
+          <div style="margin-top:12px;padding:8px;background:rgba(255,107,129,0.08);border-radius:6px;font-size:0.78rem;color:var(--text-muted)">
+            Highest HP and DEF. Best for tanking difficult missions. Grows steadily at every level.
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-title">🔮 <span style="color:#bb8fce">Mage</span></div>
+          <div class="hero-stat-row"><span class="hero-stat-label">❤️ HP Base</span><span class="hero-stat-val">70</span></div>
+          <div class="hero-stat-row"><span class="hero-stat-label">❤️ HP / lvl</span><span class="hero-stat-val">+10</span></div>
+          <div class="hero-stat-row"><span class="hero-stat-label">⚔️ ATK Base</span><span class="hero-stat-val">20</span></div>
+          <div class="hero-stat-row"><span class="hero-stat-label">⚔️ ATK / lvl</span><span class="hero-stat-val">+5.0</span></div>
+          <div class="hero-stat-row"><span class="hero-stat-label">🛡️ DEF Base</span><span class="hero-stat-val">6</span></div>
+          <div class="hero-stat-row"><span class="hero-stat-label">🛡️ DEF / lvl</span><span class="hero-stat-val">+0.5</span></div>
+          <div class="hero-stat-row"><span class="hero-stat-label">💨 SPD</span><span class="hero-stat-val">12</span></div>
+          <div style="margin-top:12px;padding:8px;background:rgba(187,143,206,0.08);border-radius:6px;font-size:0.78rem;color:var(--text-muted)">
+            Highest ATK growth — becomes extremely powerful at higher levels. Low defense means careful mission selection matters early on.
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-title">🏹 <span style="color:#81c784">Ranger</span></div>
+          <div class="hero-stat-row"><span class="hero-stat-label">❤️ HP Base</span><span class="hero-stat-val">90</span></div>
+          <div class="hero-stat-row"><span class="hero-stat-label">❤️ HP / lvl</span><span class="hero-stat-val">+12</span></div>
+          <div class="hero-stat-row"><span class="hero-stat-label">⚔️ ATK Base</span><span class="hero-stat-val">16</span></div>
+          <div class="hero-stat-row"><span class="hero-stat-label">⚔️ ATK / lvl</span><span class="hero-stat-val">+4.0</span></div>
+          <div class="hero-stat-row"><span class="hero-stat-label">🛡️ DEF Base</span><span class="hero-stat-val">8</span></div>
+          <div class="hero-stat-row"><span class="hero-stat-label">🛡️ DEF / lvl</span><span class="hero-stat-val">+1.5</span></div>
+          <div class="hero-stat-row"><span class="hero-stat-label">💨 SPD</span><span class="hero-stat-val">18</span></div>
+          <div style="margin-top:12px;padding:8px;background:rgba(129,199,132,0.08);border-radius:6px;font-size:0.78rem;color:var(--text-muted)">
+            Highest Speed. Balanced stats make Rangers reliable all-rounders for any mission type.
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Calculator -->
+      <div class="calc-card">
+        <h3>🧮 Hero Stat Calculator</h3>
+
+        <div class="calc-class-btns">
+          <button class="class-btn active" data-class="warrior">⚔️ Warrior</button>
+          <button class="class-btn" data-class="mage">🔮 Mage</button>
+          <button class="class-btn" data-class="ranger">🏹 Ranger</button>
+        </div>
+
+        <div class="calc-level-row">
+          <label for="calc-level-slider">Level</label>
+          <input type="range" id="calc-level-slider" min="1" max="50" value="1" />
+          <input type="number" id="calc-level-input" min="1" max="50" value="1" />
+        </div>
+
+        <div class="calc-stats">
+          <div class="stat-chip">
+            <div class="stat-chip-icon">❤️</div>
+            <div class="stat-chip-label">HP</div>
+            <div class="stat-chip-val" id="stat-hp">120</div>
+          </div>
+          <div class="stat-chip">
+            <div class="stat-chip-icon">⚔️</div>
+            <div class="stat-chip-label">ATK</div>
+            <div class="stat-chip-val" id="stat-atk">14</div>
+          </div>
+          <div class="stat-chip">
+            <div class="stat-chip-icon">🛡️</div>
+            <div class="stat-chip-label">DEF</div>
+            <div class="stat-chip-val" id="stat-def">12</div>
+          </div>
+          <div class="stat-chip">
+            <div class="stat-chip-icon">💨</div>
+            <div class="stat-chip-label">SPD</div>
+            <div class="stat-chip-val" id="stat-spd">10</div>
+          </div>
+          <div class="stat-chip power">
+            <div class="stat-chip-icon">⚡</div>
+            <div class="stat-chip-label">Power</div>
+            <div class="stat-chip-val" id="stat-pow">40</div>
+          </div>
+          <div class="stat-chip xp">
+            <div class="stat-chip-icon">✨</div>
+            <div class="stat-chip-label">Next Level</div>
+            <div class="stat-chip-val" id="stat-xp">100</div>
+          </div>
+        </div>
+
+        <p class="power-formula">
+          Power formula: <code>Power = (ATK × 2) + DEF + ⌊HP ÷ 10⌋</code>
+        </p>
+      </div>
+
+      <!-- XP Curve Table -->
+      <div class="xp-table-wrap">
+        <h4 style="font-family:'Cinzel',serif;font-size:0.82rem;color:var(--text-muted);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:10px;">
+          ✨ XP Curve — <code style="font-size:0.75rem">xpNeeded(level) = ⌊100 × level<sup>1.5</sup>⌋</code>
+        </h4>
+        <div id="xp-table-container"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         SECTION 3: MISSIONS
+    ════════════════════════════════════════════════════════════════════ -->
+    <section id="missions">
+      <h2 class="section-title">🗺️ Missions</h2>
+      <p class="section-desc">
+        Click any mission row to reveal its loot table.
+        Mission success depends on your hero's Power vs the mission's danger rating.
+      </p>
+
+      <div class="info-box" style="margin-bottom:20px;">
+        <h4>⚡ Success Probability</h4>
+        <span style="font-size:0.85rem;color:var(--text-muted)">
+          Your hero's <strong style="color:var(--text)">Power rating</strong> vs the mission's danger determines your odds.
+          At equal power to danger you have ~50% success. Overpowered heroes approach 95% (cap).
+          Failing a mission gives 25% consolation XP and may wound your hero temporarily.
+        </span>
+      </div>
+
+      <div id="missions-container"></div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         SECTION 4: ITEMS
+    ════════════════════════════════════════════════════════════════════ -->
+    <section id="items">
+      <h2 class="section-title">🎒 Items</h2>
+      <p class="section-desc">Complete item catalog. Weapons, armor, and accessories boost hero Power. Materials are used in crafting.</p>
+
+      <div class="filter-row">
+        <button class="filter-btn active" data-filter="all">All (30)</button>
+        <button class="filter-btn" data-filter="weapon">⚔️ Weapons</button>
+        <button class="filter-btn" data-filter="armor">🛡️ Armor</button>
+        <button class="filter-btn" data-filter="accessory">💍 Accessories</button>
+        <button class="filter-btn" data-filter="material">🪨 Materials</button>
+      </div>
+
+      <div id="items-table-container"></div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         SECTION 5: CRAFTING
+    ════════════════════════════════════════════════════════════════════ -->
+    <section id="crafting">
+      <h2 class="section-title">🔨 Crafting</h2>
+      <p class="section-desc">
+        Combine materials looted from missions into powerful gear.
+        Use <code>craft [recipe]</code> in the bot once you have the required items.
+      </p>
+
+      <div class="info-box" style="margin-bottom:20px;">
+        <h4>🔑 Crafting Tips</h4>
+        <ul style="padding-left:16px;font-size:0.88rem;color:var(--text-muted);line-height:1.9">
+          <li>Materials are dropped by missions — farm <strong style="color:var(--text)">Ore Vein</strong> for Iron Ore, <strong style="color:var(--text)">Shadow Throne</strong> for Dragon Scales.</li>
+          <li>Shadow Essence and Dragon Scales are the rarest materials — required for endgame crafting.</li>
+          <li>You can also buy some gear from the <a href="#shop">NPC Shop</a> to skip early farming.</li>
+        </ul>
+      </div>
+
+      <div id="crafting-container"></div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         SECTION 6: SHOP
+    ════════════════════════════════════════════════════════════════════ -->
+    <section id="shop">
+      <h2 class="section-title">🛒 Shop</h2>
+      <p class="section-desc">
+        The NPC shop sells starter and mid-tier gear for gold. Endgame items must be looted or crafted.
+        Use <code>buy [item]</code> to purchase and <code>sell [item]</code> to sell.
+      </p>
+
+      <div id="shop-container"></div>
+
+      <div class="info-box" style="margin-top:8px; border-left-color:var(--gold);">
+        <h4>💰 Sell Prices</h4>
+        <span style="font-size:0.88rem;color:var(--text-muted)">
+          All items have a sell price regardless of whether they appear in the shop.
+          Selling materials you don't need is a good source of income early on.
+          Check the <a href="#items">Items</a> section for each item's sell value.
+        </span>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────────────────────── -->
+  <footer>
+    <strong style="color:var(--text)">Camp of Legends</strong> — Open Beta &nbsp;|&nbsp;
+    <a href="https://t.me/TU_BOT" target="_blank" rel="noopener">Join on Telegram</a>
+    &nbsp;|&nbsp;
+    <span style="color:var(--star-off)">Wiki made with ⚔️ for the community</span>
+  </footer>
+
+  <script src="data/gamedata.js"></script>
+  <script src="js/wiki.js"></script>
+</body>
+</html>
