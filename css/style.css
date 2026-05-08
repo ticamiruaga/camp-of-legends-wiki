@@ -91,6 +91,7 @@ header {
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   display: flex;
+  justify-content: center;
   overflow-x: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
